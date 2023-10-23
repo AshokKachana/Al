@@ -1,0 +1,34 @@
+# Print Fibonacci number series 
+
+# Using for loop
+def fib(n):
+  a,b=1,1
+  for i in range(15):
+    print(a)
+    a,b=b,a+b
+NumofEle = 15
+fib(NumofEle)
+--------
+# Using while loop
+def fib(n):
+  i = 0
+  a,b=1,1
+  while i<(NumofEle):
+    print(a)
+    a,b=b,a+b
+    i+=1
+NumofEle = 15
+fib(NumofEle)
+---------
+# Using Generator
+def fib():
+  a,b=1,1
+  while True:
+    yield a
+    a,b=b,a+b
+counter=0
+for number in fib():
+  print(number)
+  counter += 1
+  if counter==15:
+    break
